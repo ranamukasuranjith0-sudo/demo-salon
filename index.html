@@ -10,30 +10,30 @@ body{background:#f2f2f7;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Tex
 h1{font-size:12px;font-weight:600;color:#8e8e93;letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px;text-align:center}
 .subtitle{font-size:13px;color:#636366;margin-bottom:24px;text-align:center}
 .device{width:100%;max-width:320px;background:#1a1a1a;border-radius:40px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.screen{background:#000;border-radius:30px;overflow:hidden;display:flex;flex-direction:column;min-height:480px}
+.screen{background:#000;border-radius:30px;overflow:hidden;display:flex;flex-direction:column;min-height:440px}
 .top-bar{background:#1c1c1e;padding:24px 20px 16px;text-align:center}
 .cname{font-size:22px;font-weight:500;color:#fff;margin-bottom:3px}
 .ctype{font-size:12px;color:#8e8e93}
 .ctime{font-size:16px;color:#e5e5ea;margin-top:10px;font-variant-numeric:tabular-nums}
-.main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#000;padding:24px 20px}
-.avatar{width:90px;height:90px;border-radius:50%;background:#2c2c2e;display:flex;align-items:center;justify-content:center;transition:background .4s}
-.avatar svg{width:38px;height:38px;stroke:#8e8e93;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
+.main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#000;padding:24px 20px}
+.avatar{width:80px;height:80px;border-radius:50%;background:#2c2c2e;display:flex;align-items:center;justify-content:center;transition:background .4s}
+.avatar svg{width:34px;height:34px;stroke:#8e8e93;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
 .avatar.speaking{background:#0a3d2e}
 .avatar.speaking svg{stroke:#34c759}
-.slabel{font-size:13px;color:#8e8e93;text-align:center;line-height:1.5;padding:0 10px}
-.volbars{display:flex;align-items:center;gap:3px;height:22px}
+.slabel{font-size:13px;color:#8e8e93;text-align:center;line-height:1.6;padding:0 10px}
+.volbars{display:flex;align-items:center;gap:3px;height:20px}
 .volbars span{width:3px;background:#34c759;border-radius:2px;animation:vl .55s ease-in-out infinite alternate}
 .volbars span:nth-child(1){height:5px;animation-delay:0s}
-.volbars span:nth-child(2){height:13px;animation-delay:.1s}
-.volbars span:nth-child(3){height:20px;animation-delay:.2s}
-.volbars span:nth-child(4){height:9px;animation-delay:.3s}
-.volbars span:nth-child(5){height:15px;animation-delay:.15s}
+.volbars span:nth-child(2){height:12px;animation-delay:.1s}
+.volbars span:nth-child(3){height:18px;animation-delay:.2s}
+.volbars span:nth-child(4){height:8px;animation-delay:.3s}
+.volbars span:nth-child(5){height:14px;animation-delay:.15s}
 @keyframes vl{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
-.actions{background:#1c1c1e;padding:16px 20px 24px;display:flex;justify-content:center;gap:32px}
-.abtn{display:flex;flex-direction:column;align-items:center;gap:6px}
-.aicon{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:transform .12s}
+.actions{background:#1c1c1e;padding:14px 20px 22px;display:flex;justify-content:center;gap:32px}
+.abtn{display:flex;flex-direction:column;align-items:center;gap:5px}
+.aicon{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;transition:transform .12s}
 .aicon:active{transform:scale(.9)}
-.aicon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.aicon svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .green{background:#34c759}.red{background:#ff3b30}.gray{background:#2c2c2e}
 .gray svg{stroke:#ebebf5}
 .alabel{font-size:10px;color:#8e8e93}
@@ -43,10 +43,8 @@ h1{font-size:12px;font-weight:600;color:#8e8e93;letter-spacing:.07em;text-transf
 .stat{background:#fff;border-radius:14px;padding:12px;text-align:center}
 .stat-n{font-size:20px;font-weight:600;color:#1c1c1e}
 .stat-l{font-size:11px;color:#8e8e93;margin-top:2px}
-/* Widget ElevenLabs visible et utilisable */
-.widget-container{width:100%;max-width:320px;margin-top:16px;background:#fff;border-radius:16px;padding:16px;display:flex;flex-direction:column;align-items:center;gap:10px}
-.widget-label{font-size:12px;color:#8e8e93;text-align:center}
-elevenlabs-convai{width:100%}
+.widget-box{width:100%;max-width:320px;margin-top:14px;background:#fff;border-radius:16px;padding:16px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.widget-label{font-size:12px;color:#8e8e93;text-align:center;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -58,33 +56,33 @@ elevenlabs-convai{width:100%}
   <div class="screen">
     <div class="top-bar">
       <div class="cname">Hélène de Monthioux</div>
-      <div class="ctype" id="ctype">Agent IA · Soins Bien-être</div>
+      <div class="ctype">Agent IA · Kobido · Drainage · Réflexo</div>
       <div class="ctime" id="ctime">00:00</div>
     </div>
     <div class="main">
       <div class="avatar" id="avatar">
         <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </div>
-      <div class="slabel" id="slabel">Appuyez sur le bouton vert<br>puis parlez naturellement</div>
+      <div class="slabel" id="slabel">Cliquez sur le micro ci-dessous<br>pour démarrer la conversation</div>
       <div class="volbars" id="volbars" style="display:none"><span></span><span></span><span></span><span></span><span></span></div>
     </div>
     <div class="actions">
       <div class="abtn">
-        <button class="aicon gray" aria-label="Muet">
+        <div class="aicon gray">
           <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
-        </button>
+        </div>
         <span class="alabel">Muet</span>
       </div>
       <div class="abtn">
-        <button class="aicon green pulse" id="callBtn" onclick="startCall()" aria-label="Appeler">
+        <div class="aicon green pulse" id="statusBtn">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </button>
-        <span class="alabel" id="callBtnLabel">Appeler</span>
+        </div>
+        <span class="alabel">En attente</span>
       </div>
       <div class="abtn">
-        <button class="aicon gray" aria-label="HP">
+        <div class="aicon gray">
           <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
-        </button>
+        </div>
         <span class="alabel">HP</span>
       </div>
     </div>
@@ -97,47 +95,34 @@ elevenlabs-convai{width:100%}
   <div class="stat"><div class="stat-n" id="s3">0</div><div class="stat-l">Appels</div></div>
 </div>
 
-<div class="widget-container">
-  <div class="widget-label">Cliquez sur le micro ci-dessous pour démarrer</div>
+<div class="widget-box">
+  <div class="widget-label">Appuyez ici pour parler à l'agent</div>
   <elevenlabs-convai agent-id="agent_8101ksyzt99rf6xtgf9k8pzba05t" id="convaiWidget"></elevenlabs-convai>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@elevenlabs/convai-widget-embed@latest/dist/convai-widget-embed.js"></script>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed@latest/dist/index.js" type="module"></script>
 <script>
-let calling=false, timerInt=null, secs=0, rdv=0, rev=0, calls=0;
+let secs=0,timerInt=null,rdv=0,rev=0,calls=0;
 
-function startCall(){
-  if(calling) return endCall();
-  calling=true; secs=0; calls++;
-  document.getElementById('s3').textContent=calls;
-  document.getElementById('callBtnLabel').textContent='Raccrocher';
-  const btn=document.getElementById('callBtn');
-  btn.className='aicon red';
-  btn.onclick=endCall;
-  btn.innerHTML='<svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M10.68 13.31a16 16 0 003.41 2.6l1.27-1.27a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-3.41-2.54M2 2l20 20"/></svg>';
+function startTimer(){
   timerInt=setInterval(()=>{
     secs++;
     document.getElementById('ctime').textContent=
       String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0');
   },1000);
-  document.getElementById('slabel').textContent='Appuyez sur le micro violet en bas · Parlez naturellement';
 }
 
-function endCall(){
-  calling=false; clearInterval(timerInt);
-  rdv++; rev+=75;
-  document.getElementById('s1').textContent=rdv;
-  document.getElementById('s2').textContent=rev+'€';
-  document.getElementById('callBtnLabel').textContent='Appeler';
-  const btn=document.getElementById('callBtn');
-  btn.className='aicon green pulse';
-  btn.onclick=startCall;
-  btn.innerHTML='<svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>';
-  document.getElementById('slabel').textContent='Appuyez sur le bouton vert\npuis parlez naturellement';
-}
-
-const w=document.getElementById('convaiWidget');
-if(w){
+window.addEventListener('load',()=>{
+  const w=document.getElementById('convaiWidget');
+  if(!w) return;
+  w.addEventListener('elevenlabs-convai:call-started',()=>{
+    calls++;
+    document.getElementById('s3').textContent=calls;
+    document.getElementById('statusBtn').className='aicon red';
+    document.getElementById('avatar').className='avatar listening';
+    document.getElementById('slabel').textContent='À vous de parler...';
+    secs=0; startTimer();
+  });
   w.addEventListener('elevenlabs-convai:agent-speaking',()=>{
     document.getElementById('avatar').className='avatar speaking';
     document.getElementById('volbars').style.display='flex';
@@ -148,7 +133,17 @@ if(w){
     document.getElementById('volbars').style.display='none';
     document.getElementById('slabel').textContent='À vous de parler...';
   });
-}
+  w.addEventListener('elevenlabs-convai:call-ended',()=>{
+    clearInterval(timerInt);
+    rdv++; rev+=75;
+    document.getElementById('s1').textContent=rdv;
+    document.getElementById('s2').textContent=rev+'€';
+    document.getElementById('statusBtn').className='aicon green pulse';
+    document.getElementById('avatar').className='avatar';
+    document.getElementById('volbars').style.display='none';
+    document.getElementById('slabel').textContent='Cliquez sur le micro ci-dessous\npour démarrer la conversation';
+  });
+});
 </script>
 </body>
 </html>
